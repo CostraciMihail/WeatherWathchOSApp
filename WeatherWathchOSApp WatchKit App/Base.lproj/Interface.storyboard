@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller fullScreen="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WeatherWathchOSApp_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group alignment="center" verticalAlignment="center" layout="vertical" radius="0.0" spacing="15" id="J1o-8R-Fsw">
+                            <items>
+                                <group width="1" alignment="center" verticalAlignment="center" id="WJE-gG-utS">
+                                    <items>
+                                        <imageView width="45" height="45" alignment="center" image="sun.max" catalog="system" contentMode="scaleAspectFit" animationDuration="2" id="lpZ-Rh-7Ph">
+                                            <gestureRecognizers>
+                                                <tapGestureRecognizer id="8RB-IZ-L9g">
+                                                    <connections>
+                                                        <action selector="didTouchIcon:" destination="AgC-eL-Hgc" id="lkW-BC-wnZ"/>
+                                                    </connections>
+                                                </tapGestureRecognizer>
+                                            </gestureRecognizers>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </imageView>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="center" verticalAlignment="center" layout="vertical" spacing="2" id="9DW-EL-FRI">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" text="16º" textAlignment="center" id="qcP-aP-F0F">
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="font" type="system" weight="medium" pointSize="32"/>
+                                        </label>
+                                        <label alignment="center" verticalAlignment="center" text="Chisinau" textAlignment="center" id="4pg-lb-huo" userLabel="Location">
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="font" type="system" weight="light" pointSize="18"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="center" verticalAlignment="bottom" spacing="5" id="Z2u-Hn-XmI">
+                                    <items>
+                                        <button width="9" height="9" alignment="center" verticalAlignment="bottom" id="H4Z-Hc-DRI" userLabel="1">
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </button>
+                                        <button width="9" height="9" alignment="center" verticalAlignment="bottom" id="YCc-Lp-tgP" userLabel="2">
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </button>
+                                        <button width="9" height="9" alignment="center" verticalAlignment="bottom" id="dG9-Mx-oQD" userLabel="3">
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </group>
+                    </items>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="locationLabel" destination="4pg-lb-huo" id="9tc-LA-vNX"/>
+                        <outlet property="temperatureLabel" destination="qcP-aP-F0F" id="Jvf-4s-ea4"/>
+                        <outlet property="weatherIcon" destination="lpZ-Rh-7Ph" id="SWC-fq-0Br"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="72" y="42"/>
+        </scene>
+        <!--List Screen Interface Controller-->
+        <scene sceneID="aJ5-Rm-PRZ">
+            <objects>
+                <controller id="xT4-AY-Ngo" customClass="ListScreenInterfaceController" customModule="WeatherWathchOSApp_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="ACh-s9-2Kc">
+                            <items>
+                                <tableRow identifier="TableRowID" id="e1R-sa-vQg">
+                                    <group key="rootItem" width="1" alignment="left" spacing="10" id="A5f-bq-GzS">
+                                        <items>
+                                            <imageView alignment="left" image="person.circle" catalog="system" id="LVz-Bj-RSa"/>
+                                            <label alignment="left" text="Label" id="C6u-px-wiW">
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </group>
+                                </tableRow>
+                            </items>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </table>
+                    </items>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="table" destination="ACh-s9-2Kc" id="a1n-k9-vTy"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="358" y="43"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="793"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="WeatherWathchOSApp_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="592" y="907"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="WeatherWathchOSApp_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="592" y="603"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="sun.max" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
