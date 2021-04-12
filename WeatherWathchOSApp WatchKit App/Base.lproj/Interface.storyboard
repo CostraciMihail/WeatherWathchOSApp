@@ -6,23 +6,16 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--MainInterfaceControllerID-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller fullScreen="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WeatherWathchOSApp_WatchKit_App" customModuleProvider="target">
+                <controller identifier="MainInterfaceControllerID" fullScreen="YES" id="AgC-eL-Hgc" customClass="MainInterfaceController" customModule="WeatherWathchOSApp_WatchKit_Extension">
                     <items>
                         <group alignment="center" verticalAlignment="center" layout="vertical" radius="0.0" spacing="15" id="J1o-8R-Fsw">
                             <items>
                                 <group width="1" alignment="center" verticalAlignment="center" id="WJE-gG-utS">
                                     <items>
                                         <imageView width="45" height="45" alignment="center" image="sun.max" catalog="system" contentMode="scaleAspectFit" animationDuration="2" id="lpZ-Rh-7Ph">
-                                            <gestureRecognizers>
-                                                <tapGestureRecognizer id="8RB-IZ-L9g">
-                                                    <connections>
-                                                        <action selector="didTouchIcon:" destination="AgC-eL-Hgc" id="lkW-BC-wnZ"/>
-                                                    </connections>
-                                                </tapGestureRecognizer>
-                                            </gestureRecognizers>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </imageView>
                                     </items>
@@ -53,7 +46,25 @@
                                     </items>
                                 </group>
                             </items>
+                            <gestureRecognizers>
+                                <swipeGestureRecognizer direction="2" id="70C-Fw-7oo">
+                                    <connections>
+                                        <action selector="didSwipe:" destination="AgC-eL-Hgc" id="wTJ-VQ-sQg"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                                <tapGestureRecognizer id="XM1-5a-dHG">
+                                    <connections>
+                                        <action selector="selectCityToDisplay:" destination="AgC-eL-Hgc" id="0fK-PU-9Zx"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="8" bottom="0.0"/>
+                            <variation key="default">
+                                <mask key="gestureRecognizers">
+                                    <exclude reference="70C-Fw-7oo"/>
+                                </mask>
+                            </variation>
                         </group>
                     </items>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,40 +72,178 @@
                         <outlet property="locationLabel" destination="4pg-lb-huo" id="9tc-LA-vNX"/>
                         <outlet property="temperatureLabel" destination="qcP-aP-F0F" id="Jvf-4s-ea4"/>
                         <outlet property="weatherIcon" destination="lpZ-Rh-7Ph" id="SWC-fq-0Br"/>
+                        <segue destination="raW-Ie-wYG" kind="relationship" relationship="nextPage" id="WLc-I3-6dO"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="72" y="42"/>
+            <point key="canvasLocation" x="390" y="-571"/>
         </scene>
-        <!--List Screen Interface Controller-->
-        <scene sceneID="aJ5-Rm-PRZ">
+        <!--Screen3-ID-->
+        <scene sceneID="8Lg-Vn-lkg">
             <objects>
-                <controller id="xT4-AY-Ngo" customClass="ListScreenInterfaceController" customModule="WeatherWathchOSApp_WatchKit_Extension">
+                <controller identifier="Screen3-ID" fullScreen="YES" id="raW-Ie-wYG">
                     <items>
-                        <table alignment="left" id="ACh-s9-2Kc">
+                        <group alignment="center" verticalAlignment="center" layout="vertical" radius="0.0" spacing="15" id="6E8-VE-U8g">
                             <items>
-                                <tableRow identifier="TableRowID" id="e1R-sa-vQg">
-                                    <group key="rootItem" width="1" alignment="left" spacing="10" id="A5f-bq-GzS">
+                                <group width="1" alignment="center" verticalAlignment="center" id="6Kz-3e-lMd">
+                                    <items>
+                                        <imageView width="45" height="45" alignment="center" image="sun.max" catalog="system" contentMode="scaleAspectFit" animationDuration="2" id="ZEp-9b-flT">
+                                            <gestureRecognizers>
+                                                <tapGestureRecognizer id="QHG-jM-s4k"/>
+                                            </gestureRecognizers>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </imageView>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="center" verticalAlignment="center" layout="vertical" spacing="2" id="ftS-pG-yBQ">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" text="15º" textAlignment="center" id="TUq-cD-1Rb">
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="font" type="system" weight="medium" pointSize="32"/>
+                                        </label>
+                                        <label alignment="center" verticalAlignment="center" text="Chisinau" textAlignment="center" id="qs4-3B-OyL" userLabel="Location">
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="font" type="system" weight="light" pointSize="18"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="center" verticalAlignment="bottom" spacing="5" id="j68-aX-LEP">
+                                    <items>
+                                        <button width="9" height="9" alignment="center" verticalAlignment="bottom" id="bPr-GV-IKT" userLabel="1">
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </button>
+                                        <button width="9" height="9" alignment="center" verticalAlignment="bottom" id="TkX-QG-6yF" userLabel="2">
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </button>
+                                        <button width="9" height="9" alignment="center" verticalAlignment="bottom" id="1x8-Dx-Hrs" userLabel="3">
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                            <gestureRecognizers>
+                                <swipeGestureRecognizer direction="2" id="vSd-qc-PLQ">
+                                    <connections>
+                                        <action selector="didSwipe:" destination="AgC-eL-Hgc" id="Vh7-hF-b0K"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                            </gestureRecognizers>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="8" bottom="0.0"/>
+                            <variation key="default">
+                                <mask key="gestureRecognizers">
+                                    <exclude reference="vSd-qc-PLQ"/>
+                                </mask>
+                            </variation>
+                        </group>
+                    </items>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <segue destination="xT4-AY-Ngo" kind="relationship" relationship="nextPage" id="zG4-fe-qiY"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="390" y="-209"/>
+        </scene>
+        <!--CitySelectionInterfaceControllerID-->
+        <scene sceneID="iOX-uy-1AU">
+            <objects>
+                <controller identifier="CitySelectionInterfaceControllerID" id="rb7-rj-Jlt" customClass="CitySelectionInterfaceController" customModule="WeatherWathchOSApp_WatchKit_Extension">
+                    <items>
+                        <label height="20" alignment="center" text="Select cities" textAlignment="center" numberOfLines="2" id="QXi-62-tU8">
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" weight="medium" pointSize="18"/>
+                        </label>
+                        <table alignment="left" id="Z5h-Fh-665">
+                            <items>
+                                <tableRow identifier="CityRow" id="hjW-Ya-XLU" customClass="CityRowController" customModule="WeatherWathchOSApp_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="249-Lm-Bs7">
                                         <items>
-                                            <imageView alignment="left" image="person.circle" catalog="system" id="LVz-Bj-RSa"/>
-                                            <label alignment="left" text="Label" id="C6u-px-wiW">
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <label alignment="center" verticalAlignment="center" text="City Name" textAlignment="center" id="9pd-QN-Vnd">
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                         </items>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </group>
+                                    <connections>
+                                        <outlet property="textGroup" destination="249-Lm-Bs7" id="CKZ-Qw-uj4"/>
+                                        <outlet property="titleLabel" destination="9pd-QN-Vnd" id="F65-sq-j9K"/>
+                                    </connections>
                                 </tableRow>
                             </items>
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </table>
                     </items>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
-                        <outlet property="table" destination="ACh-s9-2Kc" id="a1n-k9-vTy"/>
+                        <outlet property="table" destination="Z5h-Fh-665" id="ozh-dX-fKB"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="358" y="43"/>
+            <point key="canvasLocation" x="100" y="-369"/>
+        </scene>
+        <!--Screen2-ID-->
+        <scene sceneID="aJ5-Rm-PRZ">
+            <objects>
+                <controller identifier="Screen2-ID" fullScreen="YES" id="xT4-AY-Ngo" customClass="SecondInterfaceController" customModule="WeatherWathchOSApp_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="Screen 2" textAlignment="center" id="aaA-Uc-4av">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                        </label>
+                        <group width="1" height="1" alignment="center" verticalAlignment="center" spacing="3" id="Wou-vb-rWf">
+                            <items>
+                                <group width="100" height="100" alignment="left" initiallyAnimated="NO" animationDuration="1" id="kzB-eo-06O">
+                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </group>
+                                <group width="100" height="100" alignment="left" initiallyAnimated="NO" animationDuration="1" id="F26-6r-Mev">
+                                    <color key="backgroundColor" red="1" green="0.95436595652683631" blue="0.22361616557773356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </group>
+                                <group width="100" height="100" alignment="left" animationDuration="1" id="o5D-nG-Ac4">
+                                    <color key="backgroundColor" red="1" green="0.17451693051329831" blue="0.33062602722617274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </group>
+                            </items>
+                            <gestureRecognizers>
+                                <swipeGestureRecognizer id="Fol-N8-Fiu">
+                                    <connections>
+                                        <action selector="didSwipeToRight:" destination="xT4-AY-Ngo" id="XgT-Rb-INc"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                                <swipeGestureRecognizer direction="2" id="1ka-l1-GfW">
+                                    <connections>
+                                        <action selector="didSwipeToLeft:" destination="xT4-AY-Ngo" id="vyp-FA-a1K"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                                <tapGestureRecognizer id="zda-xx-vZu">
+                                    <connections>
+                                        <action selector="didTapAction:" destination="xT4-AY-Ngo" id="c18-ts-D4X"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <variation key="default">
+                                <mask key="gestureRecognizers">
+                                    <exclude reference="Fol-N8-Fiu"/>
+                                    <exclude reference="1ka-l1-GfW"/>
+                                </mask>
+                            </variation>
+                        </group>
+                    </items>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <variation key="default">
+                        <mask key="items">
+                            <exclude reference="aaA-Uc-4av"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <outlet property="firstGroup" destination="kzB-eo-06O" id="lrt-4H-kvN"/>
+                        <outlet property="leftSwipeGesture" destination="1ka-l1-GfW" id="3r9-pd-gCc"/>
+                        <outlet property="rightSwipeGesture" destination="Fol-N8-Fiu" id="Y6Y-EF-w7S"/>
+                        <outlet property="secondGroup" destination="F26-6r-Mev" id="Hhg-Vl-iQf"/>
+                        <outlet property="tapGesture" destination="zda-xx-vZu" id="FIH-ZW-2hv"/>
+                        <outlet property="thirdGroup" destination="o5D-nG-Ac4" id="R1c-kN-IYL"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="696" y="-209"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -129,7 +278,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="sun.max" catalog="system" width="128" height="121"/>
     </resources>
 </document>

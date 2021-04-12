@@ -16,8 +16,9 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-*/xcuserdatad/*
-*.xcworkspace/xcuserdata/*
+/xcuserdatad/
+*.xcworkspace/xcuserdata/
+/*.xcuserdatad/
 
 ## Other
 *.moved-aside

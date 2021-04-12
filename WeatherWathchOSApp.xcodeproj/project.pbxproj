@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7644895226162570006A160E /* SecondInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644895126162570006A160E /* SecondInterfaceController.swift */; };
 		766267552615D5B800FADC55 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766267542615D5B800FADC55 /* WeatherModel.swift */; };
 		769B8DAB2614A8940025C968 /* WeatherWathchOSApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 769B8DAA2614A8940025C968 /* WeatherWathchOSApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		769B8DB12614A8940025C968 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769B8DAF2614A8940025C968 /* Interface.storyboard */; };
 		769B8DB32614A8980025C968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 769B8DB22614A8980025C968 /* Assets.xcassets */; };
 		769B8DBA2614A8980025C968 /* WeatherWathchOSApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 769B8DB92614A8980025C968 /* WeatherWathchOSApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		769B8DBF2614A8980025C968 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769B8DBE2614A8980025C968 /* InterfaceController.swift */; };
+		769B8DBF2614A8980025C968 /* MainInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769B8DBE2614A8980025C968 /* MainInterfaceController.swift */; };
 		769B8DC12614A8980025C968 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769B8DC02614A8980025C968 /* ExtensionDelegate.swift */; };
 		769B8DC32614A8980025C968 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769B8DC22614A8980025C968 /* NotificationController.swift */; };
 		769B8DC52614A8980025C968 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769B8DC42614A8980025C968 /* ComplicationController.swift */; };
 		769B8DC72614A89A0025C968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 769B8DC62614A89A0025C968 /* Assets.xcassets */; };
 		769B8DDB2614CA210025C968 /* ListScreenInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769B8DDA2614CA210025C968 /* ListScreenInterfaceController.swift */; };
+		76D27DC526247DDC00DBB2D8 /* CitySelectionInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D27DC426247DDC00DBB2D8 /* CitySelectionInterfaceController.swift */; };
+		76D27DCD2624806400DBB2D8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D27DCC2624806400DBB2D8 /* Extensions.swift */; };
+		76D27DDE26249C3000DBB2D8 /* CityRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D27DDD26249C3000DBB2D8 /* CityRowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7644895126162570006A160E /* SecondInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondInterfaceController.swift; sourceTree = "<group>"; };
 		766267542615D5B800FADC55 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		769B8DA62614A8930025C968 /* WeatherWathchOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherWathchOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		769B8DAA2614A8940025C968 /* WeatherWathchOSApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeatherWathchOSApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +75,7 @@
 		769B8DB22614A8980025C968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		769B8DB42614A8980025C968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		769B8DB92614A8980025C968 /* WeatherWathchOSApp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WeatherWathchOSApp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		769B8DBE2614A8980025C968 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		769B8DBE2614A8980025C968 /* MainInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterfaceController.swift; sourceTree = "<group>"; };
 		769B8DC02614A8980025C968 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		769B8DC22614A8980025C968 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		769B8DC42614A8980025C968 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -78,6 +83,10 @@
 		769B8DC82614A89A0025C968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		769B8DC92614A89A0025C968 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		769B8DDA2614CA210025C968 /* ListScreenInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreenInterfaceController.swift; sourceTree = "<group>"; };
+		76D27DBB26247DAB00DBB2D8 /* WeatherWathchOSApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeatherWathchOSApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		76D27DC426247DDC00DBB2D8 /* CitySelectionInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionInterfaceController.swift; sourceTree = "<group>"; };
+		76D27DCC2624806400DBB2D8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		76D27DDD26249C3000DBB2D8 /* CityRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityRowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,15 +132,20 @@
 		769B8DBD2614A8980025C968 /* WeatherWathchOSApp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				769B8DBE2614A8980025C968 /* InterfaceController.swift */,
+				769B8DBE2614A8980025C968 /* MainInterfaceController.swift */,
+				7644895126162570006A160E /* SecondInterfaceController.swift */,
 				769B8DDA2614CA210025C968 /* ListScreenInterfaceController.swift */,
-				769B8DC02614A8980025C968 /* ExtensionDelegate.swift */,
+				76D27DC426247DDC00DBB2D8 /* CitySelectionInterfaceController.swift */,
 				769B8DC22614A8980025C968 /* NotificationController.swift */,
 				769B8DC42614A8980025C968 /* ComplicationController.swift */,
 				766267542615D5B800FADC55 /* WeatherModel.swift */,
+				76D27DCC2624806400DBB2D8 /* Extensions.swift */,
+				76D27DDD26249C3000DBB2D8 /* CityRowController.swift */,
+				769B8DC02614A8980025C968 /* ExtensionDelegate.swift */,
 				769B8DC62614A89A0025C968 /* Assets.xcassets */,
 				769B8DC82614A89A0025C968 /* Info.plist */,
 				769B8DC92614A89A0025C968 /* PushNotificationPayload.apns */,
+				76D27DBB26247DAB00DBB2D8 /* WeatherWathchOSApp-Bridging-Header.h */,
 			);
 			path = "WeatherWathchOSApp WatchKit Extension";
 			sourceTree = "<group>";
@@ -201,6 +215,7 @@
 				TargetAttributes = {
 					769B8DA52614A8930025C968 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					769B8DA92614A8940025C968 = {
 						CreatedOnToolsVersion = 12.4;
@@ -263,11 +278,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				769B8DC32614A8980025C968 /* NotificationController.swift in Sources */,
+				76D27DCD2624806400DBB2D8 /* Extensions.swift in Sources */,
 				769B8DDB2614CA210025C968 /* ListScreenInterfaceController.swift in Sources */,
 				769B8DC52614A8980025C968 /* ComplicationController.swift in Sources */,
+				7644895226162570006A160E /* SecondInterfaceController.swift in Sources */,
 				769B8DC12614A8980025C968 /* ExtensionDelegate.swift in Sources */,
+				76D27DC526247DDC00DBB2D8 /* CitySelectionInterfaceController.swift in Sources */,
+				76D27DDE26249C3000DBB2D8 /* CityRowController.swift in Sources */,
 				766267552615D5B800FADC55 /* WeatherModel.swift in Sources */,
-				769B8DBF2614A8980025C968 /* InterfaceController.swift in Sources */,
+				769B8DBF2614A8980025C968 /* MainInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,12 +518,20 @@
 		769B8DD52614A89A0025C968 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FRKQXAN23U;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ios-developer.WeatherWathchOSApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WeatherWathchOSApp WatchKit Extension/WeatherWathchOSApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -512,12 +539,19 @@
 		769B8DD62614A89A0025C968 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FRKQXAN23U;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ios-developer.WeatherWathchOSApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WeatherWathchOSApp WatchKit Extension/WeatherWathchOSApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

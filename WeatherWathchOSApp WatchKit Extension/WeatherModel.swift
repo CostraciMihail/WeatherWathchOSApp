@@ -18,43 +18,57 @@ enum WeatherType {
     case stormy
 }
 
-protocol WeatherModel {
-    
+protocol WeatherModelProtocol: Equatable {
     var city: String { get set }
     var temperatureCelsius: String { get set }
     var weatherType: WeatherType { get set }
 }
 
-struct WeatherStub: WeatherModel {
-    
+struct WeatherModel: WeatherModelProtocol, Equatable {
     var city: String
     var temperatureCelsius: String
     var weatherType: WeatherType
     
-    init() {
-        self.city = "Chisinau"
-        self.temperatureCelsius = "16º"
-        self.weatherType = .sunny
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.city == rhs.city &&
+            lhs.temperatureCelsius == rhs.temperatureCelsius &&
+            lhs.weatherType == rhs.weatherType
     }
+}
+
+extension WeatherModel {
     
-    static func randoms() -> [WeatherStub] {
+    static func randoms() -> [WeatherModel] {
         
-        var weather1 = WeatherStub()
-        weather1.city = "Chisinau"
-        weather1.temperatureCelsius = "18º"
-        weather1.weatherType = .cloudy
+        let weather1 = WeatherModel(city: "Chisinau",
+                                    temperatureCelsius: "18º",
+                                    weatherType: .cloudy)
         
-        var weather2 = WeatherStub()
-        weather2.city = "Ialoveni"
-        weather2.temperatureCelsius = "20º"
-        weather2.weatherType = .partiallyCloudy
+        let weather2 = WeatherModel(city: "Ialoveni",
+                                    temperatureCelsius: "20º",
+                                    weatherType: .partiallyCloudy)
         
-        var weather3 = WeatherStub()
-        weather3.city = "Orhei"
-        weather3.temperatureCelsius = "12º"
-        weather3.weatherType = .drizzle
+        let weather3 = WeatherModel(city: "Orhei",
+                                    temperatureCelsius: "12º",
+                                    weatherType: .drizzle)
         
-        return [weather1, weather2, weather3]
+        let weather4 = WeatherModel(city: "Balti",
+                                    temperatureCelsius: "11º", weatherType: .overcast)
+        
+        
+        let weather5 = WeatherModel(city: "Comrat",
+                                    temperatureCelsius:  "18º",
+                                    weatherType: .snow)
+        
+        
+        let weather6 = WeatherModel(city: "Dubasari",
+                                    temperatureCelsius: "19º",
+                                    weatherType: .cloudy)
+        
+        let weather7 = WeatherModel(city: "Hincesti",
+                                    temperatureCelsius: "26º",
+                                    weatherType: .sunny)
+        
+        return [weather1, weather2, weather3, weather4, weather5, weather6, weather7]
     }
-    
 }

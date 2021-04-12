@@ -19,7 +19,7 @@ class ListScreenInterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         
         // Configure interface objects here.
-        loadRowItems()
+//        loadRowItems()
     }
 
     override func willActivate() {
